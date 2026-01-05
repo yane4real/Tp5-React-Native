@@ -25,19 +25,19 @@ Create a React Native application using Expo that demonstrates:
 ## Project Structure
 
 TP5Drawer/
-├── App.js
-├── context/
-│ └── AuthContext.js
-├── navigation/
-│ ├── AppDrawer.js
-│ └── AppStack.js
-├── screens/
-│ ├── LoginScreen.js
-│ ├── TodoListScreen.js
-│ ├── TodoDetailsScreen.js
-│ └── ProfileScreen.js
-└── components/
-└── AppBar.js (optional)
+├── App.js  
+├── context/  
+│   └── AuthContext.js  
+├── navigation/  
+│   ├── AppDrawer.js  
+│   └── AppStack.js  
+├── screens/  
+│   ├── LoginScreen.js  
+│   ├── TodoListScreen.js  
+│   ├── TodoDetailsScreen.js  
+│   └── ProfileScreen.js  
+└── components/  
+    └── AppBar.js (optional)
 
 yaml
 Copier le code
@@ -127,5 +127,5 @@ Stack navigation works correctly
 Logout returns to Login screen
 
 Author
-Student Name: ____________
+Student Name: Haddouali Yassine
 TP: React Native – Drawer & Context
