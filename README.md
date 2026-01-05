@@ -1,162 +1,131 @@
-📱 TP 5 – React Native
-Drawer Navigation & Auth Context
-🎯 Objective
+# TP 5 – React Native  
+## Drawer Navigation & Auth Context
 
-The goal of this TP is to create a React Native application using Expo that demonstrates:
+## Objective
 
-Authentication state management with Context API
+Create a React Native application using Expo that demonstrates:
+- Authentication using React Context
+- Conditional navigation (Login / App)
+- Drawer Navigation
+- Stack Navigation
+- Passing parameters between screens
+- Logout functionality
 
-Conditional navigation (Login / App)
+---
 
-Drawer Navigation combined with Stack Navigation
+## Technologies Used
 
-Passing parameters between screens
+- React Native (Expo)
+- React Navigation
+- Context API
+- JavaScript
 
-Basic state management with useState and useEffect
+---
 
-Logout functionality
+## Project Structure
 
-🛠 Technologies Used
-
-React Native (Expo)
-
-React Navigation
-
-Drawer Navigator
-
-Native Stack Navigator
-
-React Context API
-
-JavaScript (ES6)
-
-📂 Project Structure
 TP5Drawer/
-│
 ├── App.js
-├── babel.config.js
-├── package.json
-│
 ├── context/
-│   └── AuthContext.js
-│
+│ └── AuthContext.js
 ├── navigation/
-│   ├── AppDrawer.js
-│   └── AppStack.js
-│
+│ ├── AppDrawer.js
+│ └── AppStack.js
 ├── screens/
-│   ├── LoginScreen.js
-│   ├── TodoListScreen.js
-│   ├── TodoDetailsScreen.js
-│   └── ProfileScreen.js
-│
+│ ├── LoginScreen.js
+│ ├── TodoListScreen.js
+│ ├── TodoDetailsScreen.js
+│ └── ProfileScreen.js
 └── components/
-    └── AppBar.js (optional – bonus)
+└── AppBar.js (optional)
 
-🚀 Installation & Setup
-1️⃣ Create the project
+yaml
+Copier le code
+
+---
+
+## Installation
+
+1. Create the project:
+```bash
 npx create-expo-app TP5Drawer
 cd TP5Drawer
+Install dependencies:
 
-2️⃣ Install dependencies
+bash
+Copier le code
 npm install @react-navigation/native
 npm install @react-navigation/drawer
 npm install @react-navigation/native-stack
 npx expo install react-native-gesture-handler react-native-reanimated
+Start the project:
 
-3️⃣ Start the project
+bash
+Copier le code
 npm start
+Authentication
+Authentication is handled using React Context
 
-🔐 Authentication System
+login() logs the user in
 
-The authentication system is implemented using React Context.
-
-AuthContext stores the connected user
-
-login(name) logs in the user
-
-logout() logs out the user
+logout() logs the user out
 
 Navigation changes depending on authentication state
 
-user ? <AppDrawer /> : <LoginScreen />
+Navigation
+If user is not logged in → LoginScreen
 
-🧭 Navigation Flow
-🔑 Not logged in
+If user is logged in → Drawer Navigator
 
-➡️ LoginScreen
-
-✅ Logged in
-
-➡️ Drawer Navigator
-
-Tâches
-
-Todo List (Stack)
-
-Todo Details
+Drawer Screens
+Tâches (Stack Navigator)
 
 Profil
 
-User information
+Stack Screens
+Todo List
 
-Logout button
+Todo Details
 
-📝 Screens Description
-🔹 LoginScreen
-
+Screens
+LoginScreen
 User enters a name
 
-Clicking “Se connecter” logs the user in
+Clicks Se connecter to log in
 
-🔹 TodoListScreen
-
-Simulated loading using useEffect
-
+TodoListScreen
 Displays a list of tasks
+
+Uses useEffect to simulate loading
 
 Clicking a task navigates to details screen
 
-🔹 TodoDetailsScreen
+TodoDetailsScreen
+Displays task title and ID
 
-Receives parameters (id, title)
+Receives data via navigation parameters
 
-Displays task information
+ProfileScreen
+Displays username
 
-🔹 ProfileScreen
+Logout button
 
-Displays logged-in user name
-
-Logout button resets authentication state
-
-🔄 Data Passing Example
+Data Passing
+js
+Copier le code
 navigation.navigate("Détails", {
   id: item.id,
   title: item.title,
 });
+Expected Result
+Login screen displayed at startup
 
-⭐ Bonus (Optional)
+Drawer navigation available after login
 
-Custom AppBar component
+Stack navigation works correctly
 
-Logout button inside the AppBar
+Logout returns to Login screen
 
-Reusable UI component
-
-✅ Expected Result
-
-User can log in
-
-Drawer navigation works correctly
-
-Stack navigation works inside the Drawer
-
-Data is passed correctly between screens
-
-Logout returns the user to the Login screen
-
-👨‍🎓 Author
-
-Student Name: __Haddouali Yassine__
-Course: React Native
-TP: Drawer Navigation & Context
+Author
+Student Name: ____________
+TP: React Native – Drawer & Context
