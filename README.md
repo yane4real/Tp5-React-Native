@@ -39,11 +39,6 @@ TP5Drawer/
 └── components/  
     └── AppBar.js (optional)
 
-yaml
-Copier le code
-
----
-
 ## Installation
 
 1. Create the project:
